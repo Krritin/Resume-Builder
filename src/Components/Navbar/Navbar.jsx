@@ -13,7 +13,7 @@ export default function Navbar() {
             <Box id='navbar' bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
                 <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
                     <ReachLink to='/'>
-                        <Box><img style={{ height: '100px' }} className='logo' src={logo} alt="logo" /></Box>
+                        <Box><img style={{ height: '130px' }} className='logo' src={logo} alt="logo" /></Box>
                     </ReachLink>
 
                     <HStack spacing={8} alignItems={'center'}>
