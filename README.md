@@ -38,8 +38,26 @@ npm run start
 - [React Router](https://reactrouter.com/)
 - [React Icons](https://react-icons.github.io/react-icons/)
 - [React HTML to PDF](https://www.npmjs.com/package/react-html-to-pdf)
+- [Visme](https://www.visme.co/) - For the animated contact form
 
 
 
-# Resume-Builder
+## Pages
+- **Home** - Landing page and resume builder interface
+- **About** - Information about the project and team
+- **Contact** - Get in touch using our interactive Visme contact form
+
+## Screenshots
+
+### Home Page
+![Home Page](./screenshots/home.png)
+
+### About Page 
+![About Page](./screenshots/about.png)
+
+### Contact Page with Visme Form
+![Contact Page](./screenshots/contact.png)
+
+
+
 # Resume-Builder
