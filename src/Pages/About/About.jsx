@@ -110,7 +110,7 @@ export default function About() {
                         fontSize={20}
                         textTransform={'uppercase'}
                         color={'teal.400'}>
-                        People love us
+                        
                     </chakra.h3>
                     <chakra.h1
                         py={5}
