@@ -1,7 +1,5 @@
 import { Flex, Container, Heading, Stack, Text, Button, Box } from '@chakra-ui/react';
 import './introduction.css';
-import homeLogo from './../../Assets/home-logo.png'
-import { Image } from '@chakra-ui/react'
 import { useContext } from 'react';
 import ResumeContext from '../../Context/ResumeContext';
 import ThemeTemplateData from '../../db/ThemeTemplateData';
@@ -21,7 +19,7 @@ export default function Introduction() {
 
 
     return (
-        <>
+        <div className="intro-container">
             <Helmet>
                 <title>Resume Builder - Create Your Resume in Minutes</title>
                 <meta name="description" content="Build your professional resume in minutes using our easy-to-use online resume builder. Choose from a variety of templates and customize your resume to land your dream job. Get started now!" />
@@ -33,9 +31,9 @@ export default function Introduction() {
                 <meta property="og:type" content="website" />
             </Helmet>
 
-            <Container my={{ base: 1.5, md: 16 }} justifyContent={'space-between'} flexDirection={{ base: 'column', md: 'row', sm: 'column' }} display={'flex'} alignItems={'center'} maxW={'7xl'}>
+            <Container my={{ base: 1.5, md: 16 }} justifyContent={'center'} flexDirection={{ base: 'column', md: 'column', sm: 'column' }} display={'flex'} alignItems={'center'} maxW={'7xl'}>
                 <Stack
-                    width={{ base: '95%', md: '47%' }}
+                    width={{ base: '95%', md: '80%' }}
                     textAlign={'center'}
                     align={'center'}
                     spacing={{ base: 8, md: 10 }}
@@ -80,11 +78,23 @@ export default function Introduction() {
                                         </Text>
                                     </Box>
                                 </Flex>
+                                
+                                <Button
+                                    onClick={handleSelectTemplate}
+                                    rounded={'full'}
+                                    px={6}
+                                    mt={4}
+                                    size={'lg'}
+                                    colorScheme={'teal'}
+                                    bg={'#38B2AC'}
+                                    _hover={{ bg: '#319795' }}>
+                                    Select Template
+                                </Button>
                             </>
                             :
                             <Heading
                                 m={'1.5'}
-                                textAlign={{ base: 'center', md: 'start' }}
+                                textAlign={'center'}
                                 fontWeight={600}
                                 fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
                                 lineHeight={'110%'}>
@@ -98,35 +108,18 @@ export default function Introduction() {
                 </Stack>
 
                 {
-                    selectBtn ?
-                        <Stack>
-                            <Image src={homeLogo} alt='home logo' my={'4'} />
-                            <Button
-                                onClick={handleSelectTemplate}
-                                rounded={'full'}
-                                px={6}
-                                className='mb-4'
-                                colorScheme={'teal'}
-                                bg={'#38B2AC'}
-                                _hover={{ bg: '#319795' }}>
-                                Select Template
-                            </Button>
-                        </Stack>
-                        :
-                        <>
-                            <Box maxW={{ base: '100%', md: '61%' }} className="templatesList">
-                                {
-                                    ThemeTemplateData.map((item, index) => {
-                                        return <div key={index} className="template" onClick={showTheme}>
-                                            <img id={item.id} src={item.imageSrc} alt={item.imageAlt} />
-                                        </div>
-                                    })
-                                }
-                            </Box>
-                        </>
+                    !selectBtn &&
+                    <Box maxW={{ base: '100%', md: '80%' }} className="templatesList">
+                        {
+                            ThemeTemplateData.map((item, index) => {
+                                return <div key={index} className="template" onClick={showTheme}>
+                                    <img id={item.id} src={item.imageSrc} alt={item.imageAlt} />
+                                </div>
+                            })
+                        }
+                    </Box>
                 }
             </Container>
-        </>
-
+        </div>
     );
 }
