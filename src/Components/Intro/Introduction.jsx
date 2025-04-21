@@ -20,16 +20,6 @@ export default function Introduction() {
 
     return (
         <div className="intro-container">
-            <Helmet>
-                <title>Resume Builder - Create Your Resume in Minutes</title>
-                <meta name="description" content="Build your professional resume in minutes using our easy-to-use online resume builder. Choose from a variety of templates and customize your resume to land your dream job. Get started now!" />
-                <meta name="keywords" content="resume builder, online resume builder, professional resume, resume templates, resume designs, resume generator, resume creator, resume maker, build resume, create resume, download resume" />
-                <meta name="robots" content="index,follow" />
-                <meta name="author" content="Hardik Desai" />
-                <meta property="og:image" content="https://avatars.githubusercontent.com/u/87645745?v=4" />
-                <meta property="og:url" content="https://quick-resume.netlify.app/about" />
-                <meta property="og:type" content="website" />
-            </Helmet>
 
             <Container my={{ base: 1.5, md: 16 }} justifyContent={'center'} flexDirection={{ base: 'column', md: 'column', sm: 'column' }} display={'flex'} alignItems={'center'} maxW={'7xl'}>
                 <Stack
