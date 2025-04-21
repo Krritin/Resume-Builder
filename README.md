@@ -52,6 +52,8 @@ npm run start
 ### Home Page
 ![Home Page](./screenshots/home.png)
 
+![Home Page](./screenshots/select.png)
+
 ### Contact Page with Visme Form
 ![Contact Page](./screenshots/contact.png)
 
